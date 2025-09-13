@@ -415,4 +415,93 @@ img {
 }
 main {
     padding: 0 10px;
+
+}
+/* General: make sure content doesn’t overflow */
+* {
+    box-sizing: border-box;
+}
+
+/* Hero Section */
+@media (max-width: 768px) {
+    .hero {
+        height: 100vh; /* Full screen still */
+        padding: 20px;
+        text-align: left;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;   /* smaller but readable */
+        line-height: 1.3;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons button {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
+/* Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar nav {
+        display: none; /* hidden until menu button */
+        flex-direction: column;
+        width: 100%;
+        background: #fff8f2;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 8px;
+    }
+
+    .navbar nav.show {
+        display: flex;
+    }
+
+    .navbar nav a {
+        margin: 10px 0;
+        font-size: 1.1rem;
+    }
+}
+
+/* Services & Why section */
+@media (max-width: 768px) {
+    .service-icons,
+    .why-icons {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service-icons div,
+    .why-icons div {
+        width: 100%;
+    }
+}
+
+/* Forms Section */
+@media (max-width: 768px) {
+    .forms-wrapper {
+        flex-direction: column;
+    }
+
+    .form-box {
+        width: 100%;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
